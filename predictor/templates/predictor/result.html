@@ -1,0 +1,14 @@
+{% extends 'predictor/base.html' %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<h2>Prediction Result</h2>
+
+<div class="alert alert-success">
+    The predicted Iris species is: <strong>{{ prediction }}</strong>
+</div>
+
+<!-- Add a button to go back to home -->
+<a href="{% url 'home' %}" class="btn btn-primary">Make Another Prediction</a>
+{% endblock %}
