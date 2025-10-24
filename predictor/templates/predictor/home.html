@@ -1,0 +1,15 @@
+{% extends 'predictor/base.html' %}
+{% block content %}
+<form method="post" action="/predict/">
+  {% csrf_token %}
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <input type="number" step="any" name="sepal_length" class="form-control mb-2" placeholder="Sepal Length" required>
+      <input type="number" step="any" name="sepal_width" class="form-control mb-2" placeholder="Sepal Width" required>
+      <input type="number" step="any" name="petal_length" class="form-control mb-2" placeholder="Petal Length" required>
+      <input type="number" step="any" name="petal_width" class="form-control mb-3" placeholder="Petal Width" required>
+      <button type="submit" class="btn btn-success">Predict</button>
+    </div>
+  </div>
+</form>
+{% endblock %}
