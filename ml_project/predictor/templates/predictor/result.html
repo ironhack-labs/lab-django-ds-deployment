@@ -1,0 +1,16 @@
+<!-- predictor/templates/predictor/result.html -->
+{% extends 'predictor/base.html' %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+        <h2 class="mb-4">Prediction Result</h2>
+        <div class="alert alert-success">
+            <strong>Prediction:</strong> {{ prediction }}
+        </div>
+        <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Make Another Prediction</a>
+    </div>
+</div>
+{% endblock %}
