@@ -1,0 +1,29 @@
+{% extends 'predictor/base.html' %}
+
+{% block title %}Home - ML Predictor{% endblock %}
+
+{% block content %}
+  <h1 class="mb-4">Enter features for prediction</h1>
+
+  <form method="post" action="{% url 'predictor:predict' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="feature1" class="form-label">Feature 1</label>
+      <input type="text" class="form-control" id="feature1" name="feature1" placeholder="e.g. 5.1">
+    </div>
+    <div class="mb-3">
+      <label for="feature2" class="form-label">Feature 2</label>
+      <input type="text" class="form-control" id="feature2" name="feature2" placeholder="e.g. 3.5">
+    </div>
+    <div class="mb-3">
+      <label for="feature3" class="form-label">Feature 3</label>
+      <input type="text" class="form-control" id="feature3" name="feature3" placeholder="e.g. 1.4">
+    </div>
+    <div class="mb-3">
+      <label for="feature4" class="form-label">Feature 4</label>
+      <input type="text" class="form-control" id="feature4" name="feature4" placeholder="e.g. 0.2">
+    </div>
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+
+{% endblock %}
