@@ -1,0 +1,63 @@
+# ----------------------
+# Python
+# ----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ----------------------
+# Virtual Environments
+# ----------------------
+venv/
+env/
+ENV/
+
+# ----------------------
+# Django
+# ----------------------
+db.sqlite3
+*.log
+staticfiles/
+
+# ----------------------
+# Environment Variables / Secrets
+# ----------------------
+.env
+.env.*
+*.env
+
+# ----------------------
+# ML Artifacts
+# ----------------------
+*.pkl
+*.joblib
+*.h5
+*.model
+
+# ----------------------
+# Jupyter
+# ----------------------
+.ipynb_checkpoints/
+
+# ----------------------
+# OS Files
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# IDE / Editors
+# ----------------------
+.vscode/
+.idea/
+
+# ----------------------
+# Node / frontend tools
+# ----------------------
+node_modules/
+
+# ----------------------
+# Allow screenshots
+# ----------------------
+!screenshot1.png
+!screenshot2.png

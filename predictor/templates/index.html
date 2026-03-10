@@ -1,0 +1,27 @@
+<h2>Iris Prediction</h2>
+
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
+
+<form action="/predict/" method="post">
+
+{% csrf_token %}
+
+<label>Sepal Length</label>
+<input name="sepal_length"><br>
+
+<label>Sepal Width</label>
+<input name="sepal_width"><br>
+
+<label>Petal Length</label>
+<input name="petal_length"><br>
+
+<label>Petal Width</label>
+<input name="petal_width"><br>
+
+<br>
+
+<button type="submit">Predict</button>
+
+</form>
