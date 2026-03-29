@@ -1,0 +1,32 @@
+{% extends "predictor/base.html" %}
+
+{% block title %}Iris Predictor{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title mb-3">Iris Flower Predictor</h2>
+                <p class="text-muted">Enter the flower measurements to predict the species.</p>
+
+                {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+
+                <form method="post" action="{% url 'predict' %}">
+                    {% csrf_token %}
+                    {% for field_name, label in features %}
+                        <div class="mb-3">
+                            <label for="{{ field_name }}" class="form-label">{{ label }}</label>
+                            <input type="number" step="0.1" name="{{ field_name }}" id="{{ field_name }}"
+                                   class="form-control" placeholder="e.g. 5.1" required>
+                        </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-success w-100">Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
