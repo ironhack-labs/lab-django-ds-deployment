@@ -1,0 +1,57 @@
+{% extends "predictor/base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+
+<div class="card p-5 text-center">
+
+    <h1 class="fw-bold mb-4">
+        🌸 Prediction Result
+    </h1>
+
+    <div class="alert alert-success">
+
+        <h2 class="mb-0">
+            {{ prediction }}
+        </h2>
+
+    </div>
+
+    <h5 class="mt-4 mb-3">
+        Measurements entered:
+    </h5>
+
+    <div class="row text-start">
+
+        <div class="col-md-6 mb-2">
+            <strong>Sepal Length:</strong>
+            {{ sepal_length }} cm
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <strong>Sepal Width:</strong>
+            {{ sepal_width }} cm
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <strong>Petal Length:</strong>
+            {{ petal_length }} cm
+        </div>
+
+        <div class="col-md-6 mb-2">
+            <strong>Petal Width:</strong>
+            {{ petal_width }} cm
+        </div>
+
+    </div>
+
+    <div class="mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">
+            Make Another Prediction
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
